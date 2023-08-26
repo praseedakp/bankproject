@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+  body{
+   background-image:url('{%  static 'bankimage4.jpg' %}');
+    background-size:100% 750px;
+    background-repeat:no-repeat;
+
+  }
+    #kn{
+    margin-left:350px;
+    margin-top:90px;
+    height:300px;
+    width:790px;
+    background-color:rgb(255,255,255,.7);
+    box-shadow:0 5px 15px rgba(0,0,0,.5);
+    color:#044456;
+    font-size:24px;
+    border:5px solid white;
+    }
+
+     #kn h1{
+    text-align:center;
+    font-size:39px;
+    font-family:cursive;
+    }
+
+    #kn input{
+    width:250px;
+    height:30px;
+    border:3px solid #044456;
+    border-radius:10px;
+    padding:3px;
+    margin-top:16px;
+    margin-left:-69px;
+    }
+
+    select{
+    width:260px;
+    height:30px;
+     margin-left:-69px;
+    }
+
+     #kn input[type=submit]{
+    background-color: #8EC5FC;
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 19%, #da6078 39%, #e9a36e 60%, #9077e0 80%, #3ee2df 100%);
+    margin-left:230px;
+    height:39px;
+    width:250px;
+    margin-top:30px;
+    border:solid 3px #044456;
+    border-radius:10px;
+    font-size:24px;
+    color:#044456;
+    }
+    #kn input[type=submit]:hover{
+    color:black;
+    background-color: #0093E9;
+background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 19%, #1e3988 39%, #90f3d8 60%, #5ee947 80%, #b796ef 100%);
+
+    }
+
+  </style>
+</head>
+<body>
+<form method="post">{% csrf_token %}
+  <div id="kn">
+  <table>
+    <h1>Show Ministatement</h1>
+    <tr>
+      <th><label>4 Digit Pin</label></th>
+      <td><input type="password" name="minipin"></td>
+    </tr>
+    <tr>
+      <th><label>Select Your Statement</label></th>
+      <td><select name="select">
+        <option>Select</option>
+        <option value="Deposite">Deposite</option>
+        <option value="Withdraw">Withdraw</option>
+
+      </select>
+
+      </td>
+
+    </tr>
+    <tr>
+      <th><input type="submit" value="Generate Statement"></th>
+    </tr>
+
+  </table>
+</div>
+</form>
+
+</body>
+</html>

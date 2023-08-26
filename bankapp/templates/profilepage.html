@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+     <script src="https://kit.fontawesome.com/a42570f4e1.js" crossorigin="anonymous"></script>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+  body{
+    background-image:url('{%  static 'bank3.jpg' %}');
+    background-size:100% 700px;
+    background-repeat:no-repeat;
+
+    }
+
+    .div1{
+    height:400px;
+    width:770px;
+    background-color:rgb(255,255,255,.9);
+    box-shadow:0 5px 15px rgba(0,0,0,.8);
+    margin-top:50px;
+    margin-left:20px;
+
+    }
+    .div1 .div2{
+    height:350px;
+    width:300px;
+    background-color: #16c1d0;
+background-image: linear-gradient(90deg, #16c1d0 4%, #FFE32C 19%, #16d87e 39%, #1b9eab 60%, #24ced6 80%, #14b97d 100%);
+
+    border:5px solid black;
+    margin-left:90px;
+    margin-top:100px;
+
+    }
+    .div1 .div3{
+    height:350px;
+    width:300px;
+    background-color: #16c1d0;
+background-image: linear-gradient(90deg, #16c1d0 4%, #FFE32C 19%, #16d87e 39%, #1b9eab 60%, #24ced6 80%, #14b97d 100%);
+    border:5px solid black;
+    float:right;
+    margin-top:-350px;
+    margin-right:50px;
+    }
+   .div2 p{
+    font-size:20px;
+    text-align:center;
+    font-family:cursive;
+    margin-top:10px;
+    }
+    .btn{
+    margin:10px;
+    margin-left:50px;
+    margin-top:30px;
+    font-family:cursive;
+    height:40px;
+    width:200px;
+    border:5px solid dimgrey;
+    font-size:17px;
+    }
+    #last{
+    height:350px;
+    width:300px;
+    background-color: #16c1d0;
+background-image: linear-gradient(90deg, #16c1d0 4%, #FFE32C 19%, #16d87e 39%, #1b9eab 60%, #24ced6 80%, #14b97d 100%);
+
+    }
+    #last{
+    float:right;
+    margin-top:-380px;
+    height:400px;
+    width:400px;
+    margin-right:100px;
+    border:5px solid black;
+    }
+    #last #first{
+    margin-top:10px;
+    background-color:white;
+    height:100px;
+    width:100px;
+    margin-left:100px;
+    border-radius:10px;
+    }
+    #last #first img{
+    height:130px;
+    width:100px;
+    border-radius:10px;
+    border:3px solid dimgrey;
+
+    }
+    #last #first .btn{
+    margin-left:-10px;
+    margin-top:-3px;
+    }
+
+    #first p{
+    font-family:cursive;
+    font-size:20px;
+    }
+    a{
+    margin-left:100px;
+    }
+
+  </style>
+</head>
+<body>
+<a href="http://127.0.0.1:8000/bankapp/logoutpage/" class="btn btn-warning">Logout</a>
+
+<div class="div1">
+  <div class="div2">
+   <b><p>First Name:{{a.fname}}</p></b>
+    <b><p>Last Name:{{a.lname}}</p></b>
+    <b><p>Username:{{a.uname}}</p></b>
+    <b><p>Email:{{a.emailfield}}</p></b>
+    <b><p>Phone Number:{{a.phonenum}}</p></b>
+      <a href="http://127.0.0.1:8000/bankapp/edithere/{{a.id}}" class="btn btn-light">Edit details</a>
+  </div>
+
+  <div class="div3">
+    <a href="http://127.0.0.1:8000/bankapp/amountaddition/{{a.id}}" class="btn btn-light">Add Amount</a><br>
+    <a href="http://127.0.0.1:8000/bankapp/withdrawmethod/{{a.id}}" class="btn btn-light">Withdraw Amount</a><br>
+    <a href="http://127.0.0.1:8000/bankapp/balancecheck/{{a.id}}" class="btn btn-light">Check Balance</a><br>
+       <a href="http://127.0.0.1:8000/bankapp/moneytrans/{{a.id}}" class="btn btn-light">Money Transfer</a><br>
+
+
+  </div>
+
+</div>
+<div id="last">
+
+  <div id="first">
+    <img src="{% static img %}">
+      <a href="http://127.0.0.1:8000/bankapp/editimagepa/{{a.id}}"><i class="fa-solid fa-image fa-2x" style="color:white;margin-left:120px;"></i></a>
+
+     <a href="http://127.0.0.1:8000/bankapp/ministatementpage/{{a.id}}" class="btn btn-light">Mini Statement</a>
+      <a href="http://127.0.0.1:8000/bankapp/newsfeeddisplay/" class="btn btn-light">Show Newsfeed</a>
+
+    <b><p>Username:{{a.uname}}</p></b>
+    <b><p>Account Number:{{a.ac_num}}</p></b>
+
+  </div>
+
+  </div>
+
+
+
+
+
+</body>
+</html>

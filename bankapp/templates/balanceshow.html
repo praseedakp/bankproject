@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Current Balance</title>
+    <style>
+    body{
+    background-image:url('{%  static 'currentbalance1.jpg' %}');
+    background-size:100% 750px;
+    background-repeat:no-repeat;
+
+    }
+    #ba{
+     margin-left:340px;
+    margin-top:200px;
+    height:300px;
+    width:770px;
+    background-color:rgb(255,255,255,.9);
+    box-shadow:0 5px 15px rgba(0,0,0,.8);
+    color:#000066;
+    font-size:24px;
+        }
+      #ba h1{
+    text-align:center;
+    font-size:39px;
+    font-family:cursive;
+    }
+    table{
+    width:500px;
+    height:100px;
+    margin-left:120px;
+    }
+     a{
+     margin-left:200px;
+     }
+    </style>
+</head>
+<body>
+<a href="http://127.0.0.1:8000/bankapp/profilepage/" class="btn btn-dark">Back</a><br>
+   <div id="ba">
+
+    <table border="2px">
+         <h1>Your Balance Details</h1>
+
+        <tr>
+           <th><label>Account Number</label></th>
+            <td>{{ac}}</td>
+        </tr>
+
+        <tr>
+            <th><label>Current Balance</label></th>
+            <td>{{a}}</td>
+
+        </tr>
+    </table>
+        </div>
+</body>
+</html>

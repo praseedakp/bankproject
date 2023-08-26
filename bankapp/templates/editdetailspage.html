@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    body{
+
+        background-image:url('{%  static 'editphoto.jpg' %}');
+    background-size:100% 750px;
+    background-repeat:no-repeat;
+
+    }
+     #fi{
+     margin-left:410px;
+    margin-top:100px;
+    height:400px;
+    width:600px;
+    background-color:rgb(255,255,255,.6);
+    box-shadow:0 5px 15px rgba(0,0,0,.5);
+    color:#044456;
+    font-size:24px;
+     border:5px solid white;
+        }
+
+         #fi h1{
+    text-align:center;
+    font-size:39px;
+    font-family:cursive;
+    }
+
+    #fi input{
+    width:260px;
+    height:30px;
+    border:3px solid #044456;
+    border-radius:10px;
+    padding:3px;
+    margin-left:-80px;
+    }
+
+     #fi input[type=submit]{
+     background-color: #FEE140;
+background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 50%, #1941bd 100%);
+    margin-left:230px;
+    height:39px;
+    width:120px;
+    margin-top:4px;
+    border:solid 3px #044456;
+    border-radius:10px;
+    font-size:24px;
+    color:#044456;
+    }
+    #fi input[type=submit]:hover{
+    color:black;
+    background-color: #d65016;
+background-image: linear-gradient(225deg, #d65016 0%, #784BA0 19%, #2cb2b7 39%, #321bb3 60%, #a21414 80%, #16868e 100%);
+
+    }
+
+    </style>
+</head>
+<body>
+<div id="fi">
+  <form method="post">{% csrf_token %}
+    <table>
+
+    <h1>Edit Details</h1>
+    <tr>
+      <th><label>First Name</label></th>
+      <td><input type="text" name="finame" value="{{a.fname}}"></td>
+
+    </tr>
+
+     <tr>
+      <th><label>Last Name</label></th>
+      <td><input type="text" name="laname" value="{{a.lname}}"></td>
+
+    </tr>
+
+
+    <tr>
+      <th><label>Email</label></th>
+      <td><input type="email" name="emailf" value="{{a.emailfield}}"></td>
+
+    </tr>
+
+    <tr>
+      <th><label>Phone Number</label></th>
+      <td><input type="number" name="pho" value="{{a.phonenum}}"></td>
+
+    </tr>
+
+    <tr>
+      <th><input type="submit" value="update"></th>
+    </tr>
+
+  </table>
+
+
+</form>
+
+
+</div>
+
+</body>
+</html>

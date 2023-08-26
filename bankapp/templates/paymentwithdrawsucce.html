@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+  body{
+   background-image:url('{%  static 'indianrepee1.jpg' %}');
+    background-size:100% 750px;
+    background-repeat:no-repeat;
+  }
+
+    h1{
+    text-align:center;
+    color:#000099;
+    }
+    img{
+    height:150px;
+    width:150px;
+    margin-top:300px;
+    margin-left:590px;
+    border:5px solid white;
+    border-radius:100%;
+
+    }
+    p{
+    font-size:30px;
+    margin-top:75px;
+    margin-left:220px;
+    color:#000099;
+    }
+     .btn{
+     margin-left:120px;
+    width:300px;
+   margin-top:10px;
+    }
+
+  </style>
+</head>
+<body>
+<a href="http://127.0.0.1:8000/bankapp/profilepage/" class="btn btn-primary">Back</a><br>
+<h1>Your Payment Withdraw Details</h1>
+<img src="{% static 'tickmark.jpg' %}">
+<b><p>{{amt}}Rs successfully  withdraw from your bank account Number:{{acco}}</p></b>
+
+
+</body>
+</html>

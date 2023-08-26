@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+         body{
+    background-image:url('{%  static 'openbank1.jpg' %}');
+    background-size:100% 750px;
+    background-repeat:no-repeat;
+
+    }
+    #wi{
+     margin-left:340px;
+    margin-top:200px;
+    height:300px;
+    width:770px;
+    background-color:rgb(255,255,255,.6);
+    box-shadow:0 5px 15px rgba(0,0,0,.5);
+    color:#044456;
+    font-size:24px;
+    border:5px solid white;
+        }
+      #wi h1{
+    text-align:center;
+    font-size:39px;
+    font-family:cursive;
+    }
+
+    #wi input{
+    width:250px;
+    height:30px;
+    border:3px solid #044456;
+    border-radius:10px;
+    padding:3px;
+    margin-left:-90px;
+    }
+
+     #wi input[type=submit]{
+    background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 30%, #28eb83 66%, #ffffff 100%);
+
+    margin-left:270px;
+    height:39px;
+    width:190px;
+    margin-top:4px;
+    border:solid 3px #044456;
+    border-radius:10px;
+    font-size:24px;
+    color:#044456;
+    }
+    #wi input[type=submit]:hover{
+    color:black;
+    background-color: #0093E9;
+background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 33%, #1e3988 66%, #ffffff 100%);
+
+    }
+
+    </style>
+</head>
+<body>
+<form method="post">{% csrf_token %}
+    <div id="wi">
+
+    <table>
+         <h1>Check Your Current Balance</h1>
+
+        <tr>
+            <th><label>Enter your 4 digit pin</label></th>
+            <td><input type="password" name="pinb"></td>
+
+        </tr>
+
+        <tr>
+            <th><input type="submit" value="Check Balance"></th>
+
+        </tr>
+
+
+
+
+    </table>
+        </div>
+</form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pinchange</title>
+</head>
+<body>
+<form method="post">{% csrf_token %}
+  <input type="password" name="pinone" placeholder="4 digit pin"><br>
+  <input type="password" name="repin" placeholder="confirm 4 digit pin"><br>
+  <input type="submit">
+
+
+</form>
+
+</body>
+</html>

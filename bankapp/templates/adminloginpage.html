@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    body{
+      background-image:url('{%  static 'loginp16.jpg' %}');
+    background-repeat:no-repeat;
+    background-size:100% 800px;
+    }
+
+        .ad{
+        height:400px;
+        width:500px;
+        background-color: #FAACA8;
+background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 50%, #2120ab 100%);
+        margin-left:170px;
+        margin-top:200px;
+        box-shadow:0 5px 15px rgba(0,0,0,.9);
+        color:#196666;
+        font-size:24px;
+        text-align:center;
+        border-radius:40% 10%;
+        }
+        .ad h1{
+    text-align:center;
+    padding:5px;
+    color:#196666;
+    }
+
+
+        input{
+        width:290px;
+        height:30px;
+        border:3px solid black;
+        border-radius:10px;
+        margin-left:50px;
+        text-align:center;
+
+
+        }
+
+        input[type=submit]{
+        background-color: #9c2614;
+background-image: linear-gradient(90deg, #9c2614 0%, #FF6A88 21%, #651020 39%, #ceb416 60%, #a514a9 80%, #2fa720 100%);
+        width:250px;
+        height:34px;
+        margin-left:50px;
+        color:white;
+        font-size:20px;
+        border-radius:5px;
+
+        }
+
+    .ad input[type=submit]:hover{
+    border:3px solid white;
+    background-color: #FF3CAC;
+background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 19%, #2B86C5 39%, #321bb3 60%, #a21414 80%, #16868e 100%);
+
+    }
+
+    </style>
+</head>
+<body>
+<div class="ad">
+    <form method="post">{% csrf_token %}
+        <h1>Admin Login</h1>
+
+        <label>Username</label><br>
+    <input type="text" name="adminusername" placeholder="adminusername"><br><br>
+
+    <label>Password</label><br>
+    <input type="password" name="adminpassw" placeholder="adminpassword"><br><br>
+
+
+    <input type="submit" value="Login">
+
+</form>
+</div>
+
+
+</body>
+</html>

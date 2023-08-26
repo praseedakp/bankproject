@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Login</title>
+   <style>
+    *{
+    margin:0;
+    padding:0px;
+
+    }
+    body{
+    background-image:url('{%  static 'imagebank21.jpg' %}');
+    background-size:100% 700px;
+
+    }
+    label{
+    margin-left:60px;
+    }
+    #lo input{
+    width:230px;
+    height:30px;
+    border:3px solid #044456;
+    border-radius:10px;
+    padding:3px;
+    margin-left:-120px;
+    }
+    #lo h1{
+    text-align:center;
+    padding:5px;
+    }
+
+     #lo{
+    margin-left:800px;
+    margin-top:140px;
+    height:350px;
+    width:600px;
+    background-color:rgb(255,255,255,.3);
+    box-shadow:0 5px 15px rgba(0,0,0,.9);
+    color:white;
+    font-size:24px;
+
+    }
+    #lo input[type=submit]{
+    background-color:rgb(255,255,255,.2);
+    margin-left:210px;
+    height:40px;
+    width:96px;
+    margin-top:4px;
+    border:solid 3px #044456;
+    border-radius:10px;
+    color:white;
+    font-size:18px;
+    #044456;
+    }
+    #lo input[type=submit]:hover{
+    border:3px solid white;
+    background-color:#00b3b3;
+    }
+    #lo a{
+    text-decoration:none;
+    color:white;
+    margin-left:30px;
+    }
+    .navbar{
+    background-color: #52ACFF;
+background-image: linear-gradient(90deg, #52ACFF 4%, #16d5da 19%, #142367 39%, #108e7f 60%, #1b6d90 80%, #21e0c9 100%);
+
+}
+
+  </style>
+
+</head>
+<body>
+<!--navbar-->
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+         <b><a class="nav-link active" aria-current="page" href="#" style="color:white;">Home</a></b>
+        </li>
+        <li class="nav-item">
+          <b><a class="nav-link" href="#" style="color:white;">Register</a></b>
+        </li>
+
+        <li class="nav-item">
+          <b><a class="nav-link" href="#" style="color:white;">Login</a></b>
+        </li>
+
+        <li class="nav-item">
+          <b><a class="nav-link" href="#" style="color:white;">About Us</a></b>
+        </li>
+
+        <li class="nav-item">
+          <b><a class="nav-link" href="#" style="color:white;">Contact Us</a></b>
+        </li>
+
+        <li class="nav-item">
+          <b><a class="nav-link" href="http://127.0.0.1:8000/bankapp/adminlogi/" style="color:white;">Admin Login</a></b>
+        </li>
+
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-dark" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<!--form-->
+
+<form method="post">{% csrf_token %}
+  <div id="lo">
+
+<table>
+  <h1>WELCOME TO BANK</h1>
+  <tr>
+    <th><label>Enter Username</label></th>
+    <td><input type="text" name="username" placeholder="Enter Username" ></td>
+  </tr><br><br>
+
+  <tr>
+    <th><label>4 digit pin</label></th>
+    <td><input type="password" name="newpin" placeholder="****" ></td>
+  </tr>
+  <tr>
+    <th><input type="submit"></th>
+  </tr>
+  <tr>
+    <td><a href="http://127.0.0.1:8000/bankapp/newregpage1/"><label>New user?Create a new account</label></a></td>
+    <td><a href="http://127.0.0.1:8000/bankapp/forgotpass/"><label>Forgot Password?</label></a></td>
+
+  </tr>
+</table>
+    </div>
+</form>
+
+</body>
+</html>

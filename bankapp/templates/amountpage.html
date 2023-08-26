@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    body{
+    background-image:url('{%  static 'bankimage51.jpg' %}');
+    background-size:100% 750px;
+    background-repeat:no-repeat;
+
+    }
+    #am{
+     margin-left:370px;
+    margin-top:200px;
+    height:300px;
+    width:690px;
+    background-color:rgb(255,255,255,.7);
+    box-shadow:0 5px 15px rgba(0,0,0,.9);
+    color:#044456;
+    font-size:24px;
+     border:5px solid white;
+        }
+      #am h1{
+    text-align:center;
+    font-size:39px;
+    font-family:cursive;
+    }
+
+    #am input{
+    width:260px;
+    height:30px;
+    border:3px solid #044456;
+    border-radius:10px;
+    padding:3px;
+    margin-left:-80px;
+    }
+
+     #am input[type=submit]{
+     background-color: #21D4FD;
+background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 24%, #1dd2b2 49%, #bf299e 75%, #131b7f 100%);
+
+    margin-left:230px;
+    height:39px;
+    width:150px;
+    margin-top:4px;
+    border:solid 3px #044456;
+    border-radius:10px;
+    font-size:24px;
+    color:#044456;
+    }
+    #am input[type=submit]:hover{
+    color:black;
+    background-color: #52ACFF;
+background-image: linear-gradient(180deg, #52ACFF 8%, #FFE32C 33%, #1e4bbd 66%, #24af39 100%);
+
+    }
+
+    </style>
+</head>
+<body>
+<form method="post">{% csrf_token %}
+    <div id="am">
+
+    <table>
+         <h1>Add Your Amount</h1>
+        <tr>
+            <th><label>Enter amount to add</label></th>
+            <td><input type="number" name="amount"></td>
+        </tr>
+        <tr>
+            <th><label>Enter the 4 digit pin</label></th>
+            <td><input type="password" name="pinold"></td>
+
+        </tr>
+
+        <tr>
+            <th><input type="submit" value="Add Amount"></th>
+
+        </tr>
+
+
+
+
+    </table>
+        </div>
+</form>
+
+</body>
+</html>

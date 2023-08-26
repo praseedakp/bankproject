@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    body{
+    background-image:url('{%  static 'bankpro27.jpg' %}');
+    background-repeat:no-repeat;
+    background-size:cover;
+        }
+        #adm{
+        margin-top:270px;
+        margin-left:109px;
+        height:290px;
+        width:500px;
+        background-color: #FFE53B;
+background-image: linear-gradient(147deg, #FFE53B 0%, #ffa225 14%, #bd6c0c 39%, #20a4b9 60%, #ed2727 80%, #ca9e7d 100%);
+
+        border:2px solid white;
+        border-radius:70px;
+        box-shadow:0 5px 15px rgba(0,0,0,.9);
+
+        }
+
+
+         textarea{
+         height:30px;
+        width:290px;
+        border:3px solid #044456;
+        border-radius:10px;
+        margin-left:98px;
+        }
+        #adm input{
+    width:290px;
+    height:30px;
+    border:3px solid #044456;
+    border-radius:10px;
+    padding:3px;
+    margin-left:98px;
+
+
+    }
+    #adm h1{
+    text-align:center;
+    padding:5px;
+    color:#21D4FD;
+    }
+
+    #adm input[type=submit]{
+     background-color: #85FFBD;
+background-image: linear-gradient(90deg, #85FFBD 0%, #FFFB7D 19%, #8c5018 39%, #c3561e 60%, #22238c 80%, #afc11d 100%);
+    margin-left:157px;
+    height:40px;
+    width:140px;
+    margin-top:4px;
+    border:solid 3px #044456;
+    border-radius:60px;
+    color:white;
+    font-size:18px;
+
+    }
+    #adm input[type=submit]:hover{
+    border:3px solid white;
+    background-color: #FA8BFF;
+background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 20%, #2BFF88 36%, #2024d6 60%, #1b9a7a 80%, #d41414 100%);
+
+    }
+   label{
+   font-size:20px;
+   margin-left:190px;
+   color:white;
+
+   }
+
+    </style>
+</head>
+<body>
+<div id="adm">
+    <form method="post">{% csrf_token %}
+    <h1>Update News Feeds</h1>
+  <label id="l">Topic</label><br>
+  <input type="text" placeholder="heading" name="topnewedit" value="{{a.topicnew}}"><br><br>
+  <label>Content</label><br>
+  <input type="text" name="contentedit" value="{{a.textar}}"></input><br>
+
+  <input type="submit" value="update">
+
+</form>
+</div>
+
+
+</body>
+</html>

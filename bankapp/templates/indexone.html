@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+  <style>
+    *{
+    margin:0;
+    padding:0px;
+    }
+    body{
+    background-image:url('{%  static 'bankreg1.png' %}');
+    background-repeat:no-repeat;
+    background-size:cover;
+
+    }
+    #im h1{
+    text-align:center;
+    font-size:39px;
+    font-family:cursive;
+    }
+
+     #im input{
+    width:260px;
+    height:30px;
+    border:3px solid #044456;
+    border-radius:10px;
+    padding:3px;
+    margin-left:-40px;
+    }
+    #im{
+    margin-left:410px;
+    margin-top:100px;
+    height:500px;
+    width:680px;
+    background-color:rgb(255,255,255,.2);
+    box-shadow:0 5px 15px rgba(0,0,0,.5);
+    color:#044456;
+    font-size:24px;
+    }
+    #im input[type=submit]{
+    background-color:rgb(255,255,255,.2);
+    margin-left:220px;
+    height:39px;
+    width:120px;
+    margin-top:4px;
+    border:solid 3px #044456;
+    border-radius:10px;
+    font-size:24px;
+    color:#044456;
+
+    }
+    #im input[type=submit]:hover{
+    color:black;
+    background-color:#00b3b3;
+    }
+  </style>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+  <div id="im">
+  <table>
+
+    <h1>WELCOME NEW USER</h1>
+    <tr>
+      <th><label>First Name</label></th>
+      <td><input type="text" name="fname" placeholder="Firstname" ></td>
+
+    </tr>
+
+     <tr>
+      <th><label>Last Name</label></th>
+      <td><input type="text" name="lname" placeholder="Lastname" ></td>
+
+    </tr>
+
+    <tr>
+      <th><label>User Name</label></th>
+      <td><input type="text" name="uname" placeholder="Username" ></td>
+
+    </tr>
+
+    <tr>
+      <th><label>Email</label></th>
+      <td><input type="email" name="emailfield" placeholder="Example@gmail.com" ></td>
+
+    </tr>
+
+    <tr>
+      <th><label>Phone</label></th>
+      <td><input type="number" name="phonenum" placeholder="Phone number" ></td>
+
+    </tr>
+
+    <tr>
+      <th><label>Upload Image</label></th>
+      <td><input type="file" name="fileimage" placeholder="Upload your image" ></td>
+
+    </tr>
+
+    <tr>
+      <th><label>4 Digit pin</label></th>
+      <td><input type="password" name="pinone" placeholder="Pin Number" ></td>
+
+    </tr>
+
+    <tr>
+      <th><label>Re-enter 4 digit pin</label></th>
+      <td><input type="password" name="repin" placeholder="Confirm pin" ></td>
+
+    </tr>
+
+    <tr>
+      <th><input type="submit"></th>
+    </tr>
+
+  </table>
+    </div>
+
+</form>
+</body>
+</html>

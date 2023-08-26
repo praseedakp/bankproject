@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+     <script>
+        function myfun(){
+
+    var body=document.getElementById('body').innerHTML;
+    var data=document.getElementById('data').innerHTML;
+    document.getElementById('body').innerHTML=data;
+    window.print()
+
+        }
+    </script>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+         body{
+        background-image:url('{%  static 'miniwithdraw.jpg' %}');
+        background-size:100% 750px;
+        background-repeat:no-repeat;
+        }
+
+        .wid h1{
+
+        text-align:center;
+        }
+        .wid{
+        height:200px;
+        width:600px;
+
+        margin-left:100px;
+
+        }
+        table{
+        height:40px;
+        width:550px;
+        border:4px solid blue;
+        margin-left:20px;
+        font-size:30px;
+        color:#00394d;
+        }
+        table td{
+        text-align:center;
+        }
+        button{
+        margin-left:20px;
+        margin-top:40px;
+        height:40px;
+        width:180px;
+        color:red;
+        border:5px solid #009999;
+        }
+    </style>
+</head>
+<body id="body">
+<a href="http://127.0.0.1:8000/bankapp/profilepage/" class="btn btn-primary">Back</a><br>
+
+     <div class="wid" id="data">
+         <table border="2px">
+         <h1>Withdraw Details</h1>
+         <th><label>Amount</label></th>
+             <th><label>Date</label></th>
+        {% for i in y %}
+         {% if i.uid == id %}
+        <tr>
+            <td>{{i.amount}}</td>
+            <td>{{i.date}}</td>
+        </tr>
+             {% endif %}
+           {% endfor %}
+    </table>
+  </div>
+<button onclick="myfun()">Print Withdraw Page</button>
+</body>
+</html>

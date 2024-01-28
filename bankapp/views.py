@@ -101,9 +101,6 @@ def editimagepage(request,id):
     return render(request,'profilepicedit.html',{'a':a,'img':img})
 
 
-# amountpage function here:add new model in models.py and registration function add
-# ac=int("15"+str(pho))
-# and ac_num=ac in b=newbankmodel
 # deposit function:
 def amountadd(request,id):
     x=newbankmodel.objects.get(id=id)
